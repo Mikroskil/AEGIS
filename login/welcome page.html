@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<Title>Welcome Page</title>
+	<link rel="stylesheet" href="style2.css"/>
+</head>
+
+<body>
+	<header id="main-header">
+		<h1>WELCOME TO OUR WEBSITE</h1>
+	</header>
+	<section id="content">
+		<form action="#" method="post">
+		<fieldset id="login-form">
+		<legend>Login Form</legend>
+			<div class="login">
+				<label for="id">ID</label>
+				<input type="number" name="userID">
+			</div>
+			<div class="login">
+				<label for="id">Password</label>
+				<input type="password" name="userpassword">
+			</div>
+			<div class="remember">
+				<input type="checkbox" name="remember me?" value="?">
+				<label for="remember">remember me?</label>
+			</div>
+			<div class="login">
+				<input type="submit" name="submit" value="Login">
+			</div>
+		</fieldset>
+		<fieldset id="register-form">
+		<legend>Register Form</legend>
+			<div class="register">
+				<label for="fullname">Full Name</label>
+				<input type="text" name="fullname">
+
+			</div>
+			<div class="register">
+				<label for="email">Email</label>
+				<input type="email" name="email" placeholder="isikan email anda" required>
+			</div>
+			<div class="register">
+				<label for="username">Username</label>
+				<input type="text" name="username" required>
+			</div>
+			<div class="register">
+				<label for="password">Password</label>
+				<input type="password" name="password" required>
+			</div>
+			<div class="register">
+				<label for="password"> Confirm Password</label>
+				<input type="password" name="password" required>
+			</div>
+			<div>
+				<label for="kelamin"></label>
+				<input type="radio" name="kelamin" value="pria">pria
+				<input type="radio" name="kelamin" value="wanita">wanita
+			</div>
+			<div>
+				<label for="datebirth">Tanggal Lahir</label>
+				<select name="tanggal">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+					<option value="11">11</option>
+					<option value="12">12</option>
+					<option value="13">13</option>
+				</select>
+				<select name="bulan">
+					<option value="january">January</option>
+					<option value="february">February</option>
+					<option value="march">March</option>
+					<option value="april">April</option>
+					<option value="may">May</option>
+					<option value="june">June</option>
+					<option value="july">July</option>
+					<option value="august">August</option>
+					<option value="september">September</option>
+					<option value="october">October</option>
+					<option value="november">November</option>
+					<option value="december">December</option>
+				</select>
+				<select name="tahun">
+					<option value="1989">1989</option>
+					<option value="1990">1990</option>
+					<option value="1991">1991</option>
+					<option value="1992">1992</option>
+					<option value="1993">1993</option>
+					<option value="1994">1994</option>
+					<option value="1995">1995</option>
+				</select>
+			</div>
+			<div class="register">
+					<input type="checkbox" name="agreement" value="?">
+					<label for="agreement">license & agreement</label>
+			</div>
+			<div class="register">
+					<input type="submit" name="submit" value="register">
+			</div>
+		</fieldset>
+		</form>
+	</section>
+	<footer id="main-footer">
+	Copyright&copy;AEGIS TEAM <br>Mikroskil
+	</footer>
+</body>
+</html>
