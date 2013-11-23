@@ -1,0 +1,22 @@
+body{
+	background: #CCC;
+}
+.container{
+	width: 960px;
+	margin:0 auto;
+}
+#search{
+	margin-right: 200px;	
+}
+.content{
+	background: #FFF;
+	height: 700px;
+}
+footer .navbar{
+	margin:0;
+}
+#main-footer{
+	background: linear-gradient(to top left, rgba(40,38,43,0.0), rgba(70,70,70,1));
+	color: #fff;
+	text-align : center;
+}
