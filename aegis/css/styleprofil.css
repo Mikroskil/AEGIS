@@ -1,0 +1,57 @@
+body{
+	background	:url("../img/bodybg.jpg") 0% 0% repeat;
+	
+}
+.container{
+	width	: 960px;
+	margin	:0 auto;
+	
+}
+#search{
+	margin-right: 200px;	
+}
+.content{
+	background	:linear-gradient(#f8dd90, #fcb908);
+	height: 700px;
+}
+#profilpic{
+	margin	: 150px auto;
+	padding	: 10px 10px;
+	text-align	:center;
+	}
+#bio {
+	margin	:100px auto;
+	padding	:5px 10px;
+	}
+#bio > h2{
+	text-align	: center;
+	}
+.biodata {
+	display	:inline-block;
+	float	: left;
+	margin	: 0 auto;
+	padding	: 5px 5px;
+	}
+.biodata > label {
+	padding: 10px 2px;
+	width	:170px;
+	}
+.biodata2 > label {
+	padding: 10px 2px;
+	
+	}
+	
+.biodata2{
+	display	:inline-block;
+	float	: right;
+	margin	: 0 auto;
+	padding	: 5px 5px;
+	}
+footer .navbar{
+	margin:0;
+}
+#main-footer{
+	background: linear-gradient(to top left, rgba(40,38,43,0.0), rgba(70,70,70,1));
+	color: #fff;
+	text-align : center;
+}
