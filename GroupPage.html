@@ -8,8 +8,8 @@
 	</head>
 
 	<body>
-		<header id="main-header">
-        	<div class="navbar navbar-inverse navbar-fixed-top">
+		<header id="main-header" class="container">
+        	<div class="container-up navbar navbar-inverse navbar-fixed-top">
                 <nav class="navbar-inner">
                 	<div class="container">
                         <ul class="nav">
@@ -31,30 +31,52 @@
     		</div>
 		</header>
     
-    	<section class="container content dropingdown">
-    		<div class="row">
-            	<div class="span7">
-					<p class="group-name">Group Name</p>
-					
+    	<section id="main-content" class="container content">
+        	<div id="upper-content" class="container content">
+            	<div class="span6">
+        			<h1 id="groupname"><a href="#">AEGIS</a></h2>
+            		<h4 id="projecttitle"><a href="#">PENGEMBANGAN WEB BIMBINGAN TUGAS AKHIR</a></h4>
+            		<div id="buttonpack" class="container">
+            			<button id="historystep1" class="stat1">STEP I</button>
+            			<button id="historystep2" class="stat1">STEP II</button>
+            			<button id="historystep3" class="stat2">STEP III</button>
+            			<button id="historystep4" class="stat3">STEP IV</button>
+            		</div>
+                    <div class="container span6">
+                    	<div id="upload" class="container span4">
+                    		<input id="browse" type="browse" name="submit" value="Browse File">
+                    	</div>
+                    		<input id="upload-file" type="submit" name="submit" value="Upload">
+                    </div>
                 </div>
-				<div class="span12 sreq">
-					<a class="srequest" href="#">Submit a Request</a>
-				</div>
+                <form action="request.php" method="post">
+                <fieldset id="request-box" class="span5">
+                <legend>Submit a request</legend>
+                <div class="request">
+                	<label for="userID">To </label>:
+					<input type="text" name="userID" required>
+                </div>
+                <div class="request">
+                    <label for="meeting">Time </label>:
+					<input type="date" name="meeting" placeholder=" dd/mm/yyyy" required>
+                </div>
+                <div class="request">
+                    <label for="reason">Purpose </label>:
+					<input type="text" name="reason" placeholder=" Isikan tujuan pertemuan anda" required>
+                	<input id="reqsub" type="submit" name="submit" value="Submit">
+                </div>    
+                </fieldset>
+                </form>
             </div>
-			<div class="row">
-				<div class="span12">
-				<h1 class=test=>Project Title</h1>
-				<a class="box done padall10" href="#">Step 1</a><a class="box active padall10" href="#">Step 2</a><a class="box passive padall10" href="#">Step 3</a><a class="box passive padall10" href="#">Step 4</a>
-				</div>
-			</div>
-			<div class="row martop15">
-				<div class="span7 box">
-				asdasdasdasdas
-				</div>
-				<div class="span5 box">
-				asdasdasd
-				</div>
-			</div>
+            <div id="mid-content" class="container content">
+    			<div id="viewer" class="span7 container">
+            	</div>
+                <div id="comment-box" class="span4 container">
+            	</div>
+            </div>
+            <div id="right-content" class="container span4">
+            	
+            </div>
     	</section>
     
     	<footer>
