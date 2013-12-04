@@ -28,7 +28,7 @@ $hasil = mysql_fetch_array($query);
                         <ul class="nav">
                             <li class="active"><a href="#">Home</a></li>
                             <li><a href="profil.html">Profile</a></li>
-                            <li><a href="GroupPage.php">Group</a></li>
+                            <li><a href="GroupPage.html">Group</a></li>
                         </ul>
                         <ul class="nav pull-right">
                             <li>
@@ -45,7 +45,7 @@ $hasil = mysql_fetch_array($query);
 		</header>
     
     	<section class="container content">
-    		<div class="row">
+    		<div class="row content2">
             	<div class="span8">
                 	<div id="calendar">
 					</div>
@@ -66,7 +66,11 @@ $hasil = mysql_fetch_array($query);
 		<script type='text/javascript' src='js/fullcalendar.min.js'></script>
         <script> $(document).ready(function() {
     		$('#calendar').fullCalendar({
-    			
+    			events : 'getEvent.php',
+				eventMouseover: function(calEvent, domEvent) {
+					var layer =	"<div id='events-layer' class='fc-transparent' style='position:absolute; width:100%; height:100%; top:-1px; text-align:right; z-index:100'></div>";
+					$(this).append(layer);
+}
 			})
 		});
         </script>

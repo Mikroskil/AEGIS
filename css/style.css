@@ -1,5 +1,6 @@
 body{
 	background: #CCC;
+	background	:url("../img/bodybg.jpg") 0% 0% repeat;
 }
 .container-up{
 	margin:0 auto;
@@ -19,6 +20,10 @@ header{
 #search{
 	margin-right: 200px;	
 }
+.content2{
+	padding: 40px 0;
+}
+.content ,
 #main-content{
 	background: #FFF;
 }
@@ -64,9 +69,7 @@ header{
 #comment-box{
 	margin-left:10px;
 }
-.row{
-	padding: 40px 0;
-}
+
 footer .navbar{
 	margin:0;
 }
