@@ -5,22 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
         <link href="css/style.css" rel="stylesheet">
-		<script type='text/javascript'>
-
-			function embedPDF(){
-
-				var myPDF = new PDFObject({ 
-
-				  url: 'http://www.pdfobject.com/pdf/sample.pdf'
-
-				}).embed('viewer'); 
-				// Be sure your document contains an element with the ID 'viewer' 
-
-			  }
-
-			  window.onload = embedPDF; //Feel free to replace window.onload if needed.
-
-</script>
 	</head>
 
 	<body>
@@ -87,6 +71,7 @@
             </div>
             <div id="mid-content" class="container content">
     			<div id="viewer" class="span7 container">
+					<iframe id="viewer" src = "/js/Viewer.js/#../data/Flowchart.pdf" width='400' height='300' allowfullscreen webkitallowfullscreen></iframe>
             	</div>
                 <div id="comment-box" class="span4 container">
                 	<div id="disqus_thread"></div>
