@@ -1,10 +1,9 @@
 body{
 	background	:url("../img/bodybg.jpg") 0% 0% repeat;
-	
 }
 .container{
 	width	: 960px;
-	margin	:0 auto;
+	margin	: 0 auto;
 	
 }
 #search{
@@ -30,7 +29,6 @@ body{
 	display	:inline-block;
 	float	: left;
 	margin	: 0 auto;
-	padding	: 5px 5px;
 	}
 .biodata > label {
 	padding: 10px 2px;

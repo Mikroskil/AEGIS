@@ -44,13 +44,17 @@ $hasil = mysql_fetch_array($query);
     		</div>
 		</header>
     
-    	<section class="container content">
+    	<section class="container content" id="main-content">
     		<div class="row content2">
             	<div class="span8">
                 	<div id="calendar">
 					</div>
 				</div>
                 <div class="span4">
+                	<h1>Notification</h1>
+                    <div id="notification">
+                    	 <?php include "notification.php"; ?> 
+                    </div>
                 </div>
             </div>
     	</section>
@@ -64,13 +68,28 @@ $hasil = mysql_fetch_array($query);
         
         <script type='text/javascript' src='jquery/jquery-1.10.2.min.js'></script>
 		<script type='text/javascript' src='js/fullcalendar.min.js'></script>
+        <script type='text/javascript' src='bootstrap/js/bootstrap.min.js'></script>
+        <script type='text/javascript' src='js/script.js'></script>
         <script> $(document).ready(function() {
     		$('#calendar').fullCalendar({
-    			events : 'getEvent.php',
-				eventMouseover: function(calEvent, domEvent) {
-					var layer =	"<div id='events-layer' class='fc-transparent' style='position:absolute; width:100%; height:100%; top:-1px; text-align:right; z-index:100'></div>";
-					$(this).append(layer);
-}
+    			eventSources: [
+					{
+						url: 'getEvent.php?stat=1', 
+						color: 'green',    
+						textColor: 'white'  
+					},
+					{
+						url: 'getEvent.php?stat=2', 
+						color: 'red',    
+						textColor: 'white'  
+					},
+					{
+						url: 'getEvent.php?stat=3', 
+						color: 'yellow',    
+						textColor: 'white'  
+					}
+			
+				]
 			})
 		});
         </script>
