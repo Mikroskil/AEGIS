@@ -1,6 +1,6 @@
 body{
 	background: #CCC;
-	background	:url("../img/bodybg.jpg") 0% 0% repeat;
+	background	:url("../img/noisy_grid.png") 0% 0% repeat;
 }
 .container-up{
 	margin:0 auto;
@@ -23,9 +23,18 @@ header{
 .content2{
 	padding: 40px 0;
 }
-.content ,
 #main-content{
-	background: #FFF;
+	background	:#CCC;
+}
+#pmain-content{
+	background	:#CCC;
+	height:700px;
+}
+#not{
+	color:#FFF;
+}
+#calendar{
+	margin-left:10px;
 }
 #upper-content,#mid-content{
 	margin-left:10px;
@@ -68,6 +77,7 @@ header{
 }
 #comment-box{
 	margin-left:10px;
+	overflow-y:scroll;
 }
 
 footer .navbar{
@@ -128,4 +138,93 @@ input[type=password]{
 	float:none;
 	margin:10px;
 	height:35px;
+}
+#notification{
+	width: 280px;
+	height: 460px;
+	border: 1px solid #000;
+	border-radius : 2px;
+	background: linear-gradient(to top,#666);
+}
+#acc,
+#dec,
+#wait{
+	margin: 2px 2px;
+	width:264px;
+	padding: 2px 5px;
+	border : 1px solid #000;
+	border-radius: 5px;
+	cursor: pointer;
+}
+#acc{
+	background:#090;
+}
+#dec{
+	background:#C00;
+	color: #FFF;
+}
+#wait{
+	background:#FF3;
+}
+#profilpic{
+	margin	: 20px auto;
+	padding	: 10px 10px;
+	text-align	:center;
+	}
+#bio {
+	margin	:20px auto;
+	padding	:5px 10px;
+	}
+#bio > h2{
+	text-align	: center;
+	}
+.biodata {
+	display	:inline-block;
+	float	: left;
+	margin	: 0 auto;
+	}
+.biodata > label {
+	width	:170px;
+	}
+.biodata2 > label {
+	width	:170px;
+	}
+	
+.biodata2{
+	display	:inline-block;
+	float	: left;
+	margin	: 0 auto;
+	}
+#struktur h2{
+	padding-left:20px;
+	color:#00F;
+}
+#strheader li{
+	list-style-type:none;
+	display:inline-block;
+	padding-right:20px;
+}
+#strheader, #strcontent{
+	border-bottom:1px solid white;
+}
+#strcontent li{
+	list-style-type:none;
+}
+#strfooter a{
+	margin:10px;
+	float:right;
+}
+#updiv{
+	margin:10px 10px 10px 0px;
+	background:#fff;
+	border:1px solid #fff;
+	border-radius:5px;
+}
+#updiv input{
+	margin:5px;
+}
+#updiv p{
+	padding-left:10px;
+	padding-top:10px;
+	color:#00F;
 }

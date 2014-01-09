@@ -1,13 +1,12 @@
 <?php
 include "koneksi.php";
-
 if($_GET['stat']=="1"){
 $result = mysql_query('select * from event where status=1');
 
 while ($record = mysql_fetch_array($result)) {		
 		$event_array[] = array(
             'id' => $record['event_ID'],
-            'title' => $record['ket'],
+            'title' => $record['Title'],
             'start' => substr($record['tanggal'],0,10)
 		);	
     }
@@ -21,7 +20,7 @@ $result = mysql_query('select * from event where status=0');
 while ($record = mysql_fetch_array($result)) {		
 		$event_array[] = array(
             'id' => $record['event_ID'],
-            'title' => $record['ket'],
+            'title' => $record['Title'],
             'start' => substr($record['tanggal'],0,10)
 		);	
     }
@@ -35,7 +34,7 @@ $result = mysql_query('select * from event where status=2');
 while ($record = mysql_fetch_array($result)) {		
 		$event_array[] = array(
             'id' => $record['event_ID'],
-            'title' => $record['ket'],
+            'title' => $record['Title'],
             'start' => substr($record['tanggal'],0,10)
 		);	
     }

@@ -3,13 +3,12 @@ body{
 }
 .container{
 	width	: 960px;
-	margin	: 0 auto;
-	
+	margin	: 0 auto;	
 }
 #search{
 	margin-right: 200px;	
 }
-.content{
+#profmain-content{
 	background	:linear-gradient(#f8dd90, #fcb908);
 	height: 700px;
 }

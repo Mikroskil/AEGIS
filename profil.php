@@ -1,10 +1,21 @@
+<?php
+session_start();
+if(!isset($_SESSION['userID'])) {
+header('location:login.php'); }
+else { $username = $_SESSION['userID']; }
+require_once("koneksi.php");
+
+$query = mysql_query("SELECT * FROM user WHERE Username = '$username'");
+$hasil = mysql_fetch_array($query);
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<title>Profil Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
-        <link href="css/styleprofil.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
         
         
 	</head>
@@ -17,7 +28,7 @@
                         <ul class="nav">
                             <li><a href="HomePage.php">Home</a></li>
                             <li class="active"><a href="#">Profile</a></li>
-                            <li><a href="GroupPage.html">Group</a></li>
+                            <li><a href="GroupPage.php">Group</a></li>
                         </ul>
                         <ul class="nav pull-right">
                             <li>
@@ -25,7 +36,7 @@
                                 <input name="q" type="text" class="search-query" placeholder="Search..." />
                             </form>
                             </li>
-                            <li><a href="#">user</a></li>
+                            <li><a href="#"><?php echo $username ?></a></li>
                             <li><a href="logout.php">Logout</a></li>
                         </ul>
                 	</div>
@@ -33,31 +44,32 @@
     		</div>
 		</header>
 
-    	<section id="profmain-content" class="container content">
+    	<section class="container content profil" id="pmain-content">
 
     		<div class="row">
             	<div class="span5">
             		<div id="profilpic">
-						<img src="img/hitler.jpg" width="140px" height="250px" alt="profilpic" />
+						<img src="img/no-img.jpg" width="140px" height="250px" alt="profilpic" />
             		</div>
                 </div>
-                <div class="span5">
+                <div class="span6">
                 	<div id="bio">
                 	<h2>BIODATA</h2>
-                		<div class="biodata">
-                			<label for="nama lengkap">Nama Lengkap</label>
-                			<label for="umur">Umur</label>
-                			<label for="jenis kelamin">Jenis Kelamin</label>
-                			<label for="jurusan">Jurusan</label>
-                			<label for="universitas">Universitas</label>
-                			<label for="nim">NIM</label>
-                			<label for="dosen pembimbing">Dosen Pembimbing</label>
+                		<div class="biodata span3">
+                        	
+                			<label for="nama lengkap">Nama Lengkap</label>:
+                			<label for="umur">Umur</label>:
+                			<label for="jenis kelamin">Jenis Kelamin</label>:
+                			<label for="jurusan">Jurusan</label>:
+                			<label for="universitas">Universitas</label>:
+                			<label for="nim">NIM</label>:
+                			<label for="dosen pembimbing">Dosen Pembimbing</label>:
                 		</div>
-                		<div class="biodata2">
+                		<div class="biodata2 span3">
 
-							<label for="nama lengkap">Ryan Paulus</label>
+							<label for="nama lengkap"><?php echo $hasil['Nama_Lengkap'] ?></label>
 							<label for="umur">22</label>
-							<label for="jenis kelamin">Pria</label>
+							<label for="jenis kelamin"><?php echo $hasil['JK'] ?></label>
 							<label for="jurusan">Teknik Informatika</label>
 							<label for="universitas">STMIK MIKROSKIL</label>
 							<label for="nim">121112376</label>

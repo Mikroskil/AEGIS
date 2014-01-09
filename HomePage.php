@@ -27,8 +27,8 @@ $hasil = mysql_fetch_array($query);
                 	<div class="container">
                         <ul class="nav">
                             <li class="active"><a href="#">Home</a></li>
-                            <li><a href="profil.html">Profile</a></li>
-                            <li><a href="GroupPage.html">Group</a></li>
+                            <li><a href="profil.php">Profile</a></li>
+                            <li><a href="GroupPage.php">Group</a></li>
                         </ul>
                         <ul class="nav pull-right">
                             <li>
@@ -51,7 +51,7 @@ $hasil = mysql_fetch_array($query);
 					</div>
 				</div>
                 <div class="span4">
-                	<h1>Notification</h1>
+                	<h4 id="not">Notification</h4>
                     <div id="notification">
                     	 <?php include "notification.php"; ?> 
                     </div>

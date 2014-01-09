@@ -16,7 +16,7 @@ background :#999;
 	}
 #main-header {
 	background	:#333;
-	height		: 80px;
+	height		: 60px;
 	padding		: 5px 0px;
 	background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #7b8085), color-stop(100%, #313436)); 
 	background-image: -webkit-linear-gradient(#7b8085, #313436);
@@ -34,7 +34,7 @@ h1{
 #content {
 	margin	: 0 auto;
 	padding	: 10px 50px;
-	background	:#fff;
+	background	: url("../img/fall.jpg") 0% 0% repeat;
 	
 	}
 
