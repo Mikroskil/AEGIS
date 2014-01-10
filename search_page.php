@@ -11,6 +11,7 @@ else { $username = $_SESSION['userID'];
 //$query = mysql_query("SELECT * FROM user WHERE Username = '$username'");
 //$hasil = mysql_fetch_array($query);
 ?>
+
 <!DOCTYPE html>
 <html>
 	<head>
@@ -46,59 +47,38 @@ else { $username = $_SESSION['userID'];
                 </nav>
     		</div>
 		</header>
-    
-    	<section class="container content" id="main-content">
-    		<div class="row content2">
-            	<div class="span8">
-                	<div id="calendar">
+		
+        <section class="container content profil" id="main-content">
+        <?php
+			$search = $_GET['q'];
+			
+			$query = mysql_query('select * FROM user where Username LIKE "%$search%" ');
+			
+			if(mysql_num_rows($result) == 0){
+				echo "<p style=\"text-align:center\">Tidak Ditemukan</p>";
+			}
+			else{
+				$i = 1;
+				while ($record = mysql_fetch_assoc($result)) {
+					echo "<div>
+						<span>$1</span> <span></span> <span>$record[Nama_Lengkap]</span> <span></span>
 					</div>
-				</div>
-                <div class="span4">
-                	<h4 id="not">Notification</h4>
-                    <div id="notification">
-                    	 <?php include "notification.php"; ?> 
-                    </div>
-                </div>
-            </div>
-    	</section>
-    
+			";	
+			$i = $i + 1;	
+				}
+			}
+			
+		?>
+      		
+        </section>
+
     	<footer>
-        	<div id="main-footer">
+            <div id="main-footer">
             			    Provided By AEGIS TEAM<br>
                             <a href="www.mikroskil.ac.id">Mikroskil</a>
             </div>
     	</footer>
-        
-        <script type='text/javascript' src='jquery/jquery-1.10.2.min.js'></script>
-		<script type='text/javascript' src='js/fullcalendar.min.js'></script>
-        <script type='text/javascript' src='bootstrap/js/bootstrap.min.js'></script>
-        <script type='text/javascript' src='js/script.js'></script>
-        <script> $(document).ready(function() {
-    		$('#calendar').fullCalendar({
-    			eventSources: [
-					{
-						url: 'getEvent.php?stat=1&user=<?php $_SESSION['userID']; ?>', 
-						color: 'green',    
-						textColor: 'white'  
-					},
-					{
-						url: 'getEvent.php?stat=2&user=<?php $_SESSION['userID']; ?>', 
-						color: 'red',    
-						textColor: 'white'  
-					},
-					{
-						url: 'getEvent.php?stat=3&user=<?php $_SESSION['userID']; ?>', 
-						color: 'yellow',    
-						textColor: 'black'  
-					}
-			
-				]
-			})
-		});
-        </script>
-        
-	</body>
- </html>
 <?php
 }
 ?>
+
